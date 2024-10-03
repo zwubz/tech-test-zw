@@ -1,0 +1,12 @@
+#/bin/bash
+
+CONF_FILE = os-release
+DOC_URL = https://help.ubuntu.com/lts/ubuntu-help/index.html
+
+# If there is at least one argument, assume the first argument
+# is the documentation url.
+if [ $# > 1 ] then
+  DOC_URL = $1
+fi
+
+echo "DOCUMENTATION_URL="$DOC_URL"" > os-release
